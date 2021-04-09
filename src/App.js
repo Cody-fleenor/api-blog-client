@@ -15,25 +15,23 @@ const App = () =>{
         dispatch(getPosts);
     }, [dispatch]);
     return(
-        <Container maxwidth = "lg">
+        <Grid container spacing = {1}>
             <AppBar className={classes.appBar} position="static" color="inherit">
                 <Typography className={classes.heading} variant="h4" align="center">
-                    Portland Biking Blog
-                    <img className={classes.images} src={BlogImage} alt="BlogImage" height="70em" />
+                    Biking Blog
                 </Typography>
             </AppBar>
             <Grow in>
                 <Grid container justify='space-between' alignItems='stretch' spacing= '3' >
-                    <Grid item xs={12} sm={7}>
+                    <Grid item xs={12} sm={9}>
                         <Posts />
                     </Grid>
-                    <Grid item xs={12} sm={5}>
+                    <Grid item xs={12} sm={3}>
                         <Form />
                     </Grid>
                 </Grid>
             </Grow>
-
-        </Container>
+        </Grid>
 
     )
 }

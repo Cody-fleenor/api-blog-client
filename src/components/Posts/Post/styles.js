@@ -7,6 +7,10 @@ export default makeStyles({
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     backgroundBlendMode: 'darken',
   },
+  paper: {
+    padding: '15',
+    textAlign: 'center',
+  },
   border: {
     border: 'solid',
   },
