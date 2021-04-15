@@ -4,7 +4,6 @@ import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import Grid from '@material-ui/core/Grid';
 import Comments from '/home/jacq/Desktop/API - Blog 04-06-21/client/src/components/Comments/Comments.js';
 import { Button } from '@material-ui/core';
 

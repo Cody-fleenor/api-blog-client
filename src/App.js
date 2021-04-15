@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import { getPosts } from "./actions/posts";
-import { Grow, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Posts from "./components/Posts/Posts";
 import AppBar from './components/AppBar';
 import useStyles from './styles';
@@ -14,19 +14,14 @@ const App = () =>{
         dispatch(getPosts);
     }, [dispatch]);
     return(
+        <>
         <Grid container spacing = {1}>
             <AppBar/>
-            <Grow in>
-            <div className={classes.root}>
-                <Grid container spacing={3}>
-                    <Grid item xs={12} sm={4}>
-                        <Posts />
-                    </Grid>
-                </Grid>
-            </div>
-            </Grow>
         </Grid>
-
+        <Grid container spacing={1}>
+            <Posts />
+        </Grid>
+        </>
     )
 }
 

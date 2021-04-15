@@ -10,14 +10,16 @@ const Posts = () => {
     const classes = useStyles();
     const getPost = postObj => {
         return (
-            <Grid item xs={12} lg={4}>
-                <Post {...postObj} />
-            </Grid>
+            <div className={classes.root}>
+                <Grid>
+                    <Post {...postObj} />
+                </Grid>
+            </div>
         );
     };
     return (
-        < div style={{margin:'3', padding:'3'}}>
-            <Grid container spacing={2}>
+        < div >
+            <Grid container spacing={1}>
                 {postList.map(postObj => getPost(postObj))}
             </Grid>
         </div>
