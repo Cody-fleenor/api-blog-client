@@ -3,12 +3,13 @@ import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, responsiveFontSizes } from "@material-ui/core";
 
 const useStyles = makeStyles({
     cardHeader:{
         textAlign: "center",
-        padding: 5
+        padding: 0,
+        textSize: '5px'
     }
 })
 
@@ -17,10 +18,12 @@ const Comment = props =>{
     const classes = useStyles();
     return(
         <Card>
-            <CardHeader classes={classes.cardHeader}
-                title= {userId}
-                date= {date}
-             />
+            <CardContent>
+                <Typography variant="body2" component="p">
+                    {userId}
+                    {date}
+                </Typography>
+            </CardContent>
             <CardContent>
                 <Typography variant="body2" component="p">
                     {description}
