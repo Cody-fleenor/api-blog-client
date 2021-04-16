@@ -17,9 +17,6 @@ const Comments = () => {
     };
     return (
         <>
-        <div>
-            Comments
-        </div>
         <Grid container spacing={1}>
             {commentList.map(commentObj => getComment (commentObj))}
         </Grid>

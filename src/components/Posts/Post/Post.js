@@ -4,33 +4,23 @@ import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import Comments from '/home/jacq/Desktop/API - Blog 04-06-21/client/src/components/Comments/Comments.js';
-import { Button } from '@material-ui/core';
+import CommentDropDown from '../../CommentDropDown';
 
 const Post = (props) => {
     const classes = useStyles();
     return (
         <>
-        <Card style={{margin:'3px'}}>
-            <CardHeader classes={classes.cardHeader}
-                title= {props.userId}
-                date= {props.date}>
-            </CardHeader>
+        <Card>
             <CardContent>
-                <Button type="button" onClick={(e) => {
-                e.preventDefault();
-                window.location.href=`post/1`;
-                }}>
-                    Click Here
-                </Button>
-            </CardContent>
-            <CardContent>
+                <CardHeader classes={classes.cardHeader}
+                    title= {props.userId}>
+                </CardHeader>
                 <Typography variant="body2" component="p">
                     {props.description}
                 </Typography>
             </CardContent>
             <CardContent>
-                <Comments/>
+                <CommentDropDown />
             </CardContent>
         </Card>
         </>
